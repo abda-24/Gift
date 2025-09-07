@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift List Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gift List Manager</h1>
+            <p>Keep track of gift ideas for your friends and family</p>
+        </header>
+        
+        <main>
+            <section class="add-gift-section">
+                <h2>Add New Gift Idea</h2>
+                <form id="gift-form" class="gift-form">
+                    <div class="form-group">
+                        <label for="gift-name">Gift Name:</label>
+                        <input type="text" id="gift-name" name="gift-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gift-description">Description:</label>
+                        <textarea id="gift-description" name="gift-description" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipient">Recipient:</label>
+                        <input type="text" id="recipient" name="recipient" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reminder-date">Reminder Date (Optional):</label>
+                        <input type="date" id="reminder-date" name="reminder-date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="event-type">Event Type:</label>
+                        <select id="event-type" name="event-type">
+                            <option value="">Select event type</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="holiday">Holiday</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="add-btn">Add Gift</button>
+                </form>
+            </section>
+            
+            <section class="gift-list-section">
+                <h2>Your Gift List</h2>
+                <div id="gift-list" class="gift-list">
+                    <!-- Sample gift items for demonstration -->
+                    <div class="gift-item">
+                        <div class="gift-header">
+                            <h3 class="gift-name">Wireless Headphones</h3>
+                            <div class="reminder-icon" title="Birthday reminder">🎂</div>
+                        </div>
+                        <p class="gift-description">High-quality noise-canceling headphones for music lover</p>
+                        <p class="gift-recipient"><strong>For:</strong> Sarah</p>
+                        <p class="gift-date"><strong>Event:</strong> Birthday - Dec 15, 2024</p>
+                        <div class="gift-actions">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+                    
+                    <div class="gift-item">
+                        <div class="gift-header">
+                            <h3 class="gift-name">Coffee Maker</h3>
+                        </div>
+                        <p class="gift-description">Programmable coffee maker with thermal carafe</p>
+                        <p class="gift-recipient"><strong>For:</strong> Dad</p>
+                        <p class="gift-date"><strong>Event:</strong> Father's Day</p>
+                        <div class="gift-actions">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+                    
+                    <div class="gift-item">
+                        <div class="gift-header">
+                            <h3 class="gift-name">Art Supplies Set</h3>
+                            <div class="reminder-icon" title="Anniversary reminder">💕</div>
+                        </div>
+                        <p class="gift-description">Professional watercolor and sketching set</p>
+                        <p class="gift-recipient"><strong>For:</strong> Mom</p>
+                        <p class="gift-date"><strong>Event:</strong> Anniversary - Jan 20, 2025</p>
+                        <div class="gift-actions">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="empty-state" class="empty-state" style="display: none;">
+                    <p>No gifts added yet. Start by adding your first gift idea!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
